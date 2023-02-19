@@ -1,0 +1,19 @@
+.main {
+  display: flex;
+  flex-direction:row ;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+  background-color: lightblue;
+  flex-wrap: wrap;
+}
+
+.main > div {
+  background-color: antiquewhite;
+  width: 150px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}

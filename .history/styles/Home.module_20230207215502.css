@@ -1,0 +1,15 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+  background-color: lightblue;
+}
+
+.main > div {
+  background-color: antiquewhite;
+  width: 100px;
+  margin: 10px;
+  
+}

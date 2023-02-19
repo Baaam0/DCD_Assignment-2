@@ -1,0 +1,29 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+  padding: 6rem;
+  min-height: 100vh;
+  background-color: rgb(50, 48, 50);
+  flex-wrap: wrap;
+  color: rgb(224, 128, 113)
+}
+
+.main > div {
+  background-color: antiquewhite;
+  margin: 10px;
+  padding: 2em;
+}
+
+.contTop {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: 2em 0;
+}
+
+.bodyDesc {
+  width: 30%;
+  text-align: left;
+}
