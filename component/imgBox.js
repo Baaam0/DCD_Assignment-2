@@ -10,18 +10,18 @@ function ImgBox({
 }) {
   return (
     <div className={styles.box1}>
-    <div className={styles.line1}>
-      <div className={styles.box2}>
-        <MinimizeSharpIcon/>
-      </div>
-      <div className={styles.box2}>
-        <VideoLabelSharpIcon fontSize="small"/>
-      </div>
-      <div className={styles.box2}>
-        <CloseSharpIcon 
-          onClick={xClick}
-          className={styles.closeButton}
-        />
+      <div className={styles.line1}>
+        <div className={styles.box2}>
+          <MinimizeSharpIcon/>
+        </div>
+        <div className={styles.box2}>
+          <VideoLabelSharpIcon fontSize="small"/>
+        </div>
+        <div className={styles.box2}>
+          <CloseSharpIcon 
+            onClick={xClick}
+            className={styles.closeButton}
+          />
       </div>
     </div>
   
