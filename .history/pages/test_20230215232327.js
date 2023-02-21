@@ -1,3 +1,0 @@
-function caculateDaysBetweenDates (begin, end) {
-    
-}
