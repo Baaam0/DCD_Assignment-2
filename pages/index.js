@@ -34,7 +34,7 @@ export default function Home() {
       <main className={styles.main} id="main"> 
         <div className={styles.heading}>
           <div>
-            <img src="/logo.png" width={80} height={80}/>
+            <Link href="/"><img src="/logo.png" width={80} height={80}/> </Link>
             <h2>PeriWinkie</h2>
             <Link href="/review"><h1> check review <Image src="/cursor.png" width={15} height={20}/></h1></Link>
           </div>
@@ -42,11 +42,17 @@ export default function Home() {
           
         </div>
         <div className={styles.reviewCont} >
-          <div className={styles.imgFront}>
+          <div className={styles.imgFront} id="imgFront">
             <ImgBox
               src={imageSrc[index]}
               xClick={()=>{
                 setIndex((index+1)%imageSrc.length);
+              }}
+              maxClick={()=>{
+                document.getElementById("imgFront").style.width = "130%";       
+              }}
+              minClick={()=>{
+                document.getElementById("imgFront").style.width = "30%";       
               }}
             />
             <div className={styles.imgBehind} id="imgBehind">
@@ -54,13 +60,14 @@ export default function Home() {
                 src={imageSrc[index+1]}
               />
             </div>
+          </div> 
+          <div className={styles.nextButton} id="button">
+            <Link href="/review" id="buttonText">
+              Check Out Reviews
+            </Link>
           </div>
         </div>
-        <div className={styles.nextButton} id="button">
-          <Link href="/review" id="buttonText">
-            Check Out Reviews
-          </Link>
-        </div>
+       
       </main>
     </>
   )

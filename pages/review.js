@@ -9,6 +9,7 @@ import CloseSharpIcon from '@mui/icons-material/CloseSharp';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 
+
 export default function Home() {
   const [bodyType, setBodyType] = useState();
 
@@ -27,7 +28,7 @@ export default function Home() {
       <main className={styles.main2}>
       <div className={styles.heading} id="heading">
         <div>
-          <img src="/logo.png" width={80} height={80}/>
+          <Link href="/"><img src="/logo.png" width={80} height={80}/></Link>
           <h2>PeriWinkie</h2>
           <Link href="/"><h2> Homepage <Image src="/cursor.png" width={15} height={20}/></h2></Link>
         </div>
@@ -72,8 +73,8 @@ export default function Home() {
                           <div> <span>Rating </span> <span>{rec.rating}</span></div>
                           <div className={styles.bodyDesc}>
                             <div> <span>Body Type</span> {rec["body type"]}</div>
-                            <div> <span>Height</span> {!rec.height ? " -": rec.height }</div>
-                            <div> <span>Weight</span>{!rec.weight ? " -" : rec.weight }</div>
+                            <div> <span>Height </span> {!rec.height ? " -": rec.height }</div>
+                            <div> <span>Weight </span>{!rec.weight ? " -" : rec.weight }</div>
                           </div>
                        
                       </div>
@@ -92,7 +93,9 @@ export default function Home() {
                           <FavoriteBorderIcon sx={{ fontSize: 20}}/> 
                         </div>
                         <div className={styles.box2}>  
-                          <CloseSharpIcon/> 
+                          <CloseSharpIcon
+                            onClick={() => {document.getElementById("cont").style.display = "none"}}
+                          /> 
                         </div>
                       </div>
                     <div key={index} className={styles.cont2}>
@@ -100,8 +103,8 @@ export default function Home() {
                         <div> <span>Rating </span> <span>{rec.rating}</span></div>
                           <div className={styles.bodyDesc}>
                             <div> <span>Body Type</span> {rec["body type"]}</div>
-                            <div> <span>Height</span> {!rec.height ? " -": rec.height }</div>
-                            <div> <span>Weight</span>{!rec.weight ? " -" : rec.weight }</div>
+                            <div> <span>Height </span> {!rec.height ? " -": rec.height }</div>
+                            <div> <span>Weight </span>{!rec.weight ? " -" : rec.weight }</div>
                           </div>
                       </div>
                       <div><span>Review</span> <hr/> {rec.review_text}</div>

@@ -6,16 +6,23 @@ import styles from '@/styles/Home.module.css'
 
 function ImgBox({
   src,
-  xClick
+  xClick,
+  maxClick,
+  minClick
 }) {
   return (
     <div className={styles.box1}>
       <div className={styles.line1}>
         <div className={styles.box2}>
-          <MinimizeSharpIcon/>
+          <MinimizeSharpIcon
+            onClick={minClick}
+          />
         </div>
         <div className={styles.box2}>
-          <VideoLabelSharpIcon fontSize="small"/>
+          <VideoLabelSharpIcon 
+            fontSize="small"
+            onClick={maxClick}  
+          />
         </div>
         <div className={styles.box2}>
           <CloseSharpIcon 
